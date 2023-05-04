@@ -1,5 +1,5 @@
 CONTIKI_PROJECT = Push_button
 all: $(CONTIKI_PROJECT)
 
-CONTIKI = ../..
+CONTIKI = ../../..
 include $(CONTIKI)/Makefile.include

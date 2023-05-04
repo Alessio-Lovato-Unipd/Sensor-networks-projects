@@ -1,7 +1,7 @@
 CONTIKI_PROJECT = nullnet-broadcast
 all: $(CONTIKI_PROJECT)
 
-CONTIKI = ../..
+CONTIKI = ../../..
 
 #use this to enable TSCH: MAKE_MAC = MAKE_MAC_TSCH
 MAKE_MAC ?= MAKE_MAC_CSMA

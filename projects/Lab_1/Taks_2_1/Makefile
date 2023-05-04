@@ -1,5 +1,5 @@
 CONTIKI_PROJECT = LEDs
 all: $(CONTIKI_PROJECT)
 
-CONTIKI = ../..
+CONTIKI = ../../..
 include $(CONTIKI)/Makefile.include
