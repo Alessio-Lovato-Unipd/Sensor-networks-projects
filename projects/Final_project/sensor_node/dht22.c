@@ -44,7 +44,7 @@
 #include "dev/watchdog.h"
 #include <stdio.h>
 /*---------------------------------------------------------------------------*/
-#define DEBUG 0
+#define DEBUG 1
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
 #else
@@ -216,8 +216,7 @@ dht22_read_all(int16_t *temperature, int16_t *humidity)
   return DHT22_ERROR;
 }
 /*---------------------------------------------------------------------------*/
-static int
-configure(int type, int value)
+int configure_DHT22(int type, int value)
 {
   if(type != SENSORS_ACTIVE) {
     return DHT22_ERROR;
@@ -240,7 +239,7 @@ configure(int type, int value)
   return DHT22_SUCCESS;
 }
 /*---------------------------------------------------------------------------*/
-SENSORS_SENSOR(dht22, DHT22_SENSOR, value, configure, NULL);
+SENSORS_SENSOR(dht22, DHT22_SENSOR, value, configure_DHT22, NULL);
 /*---------------------------------------------------------------------------*/
 /** @} */
 //Generated on Thu Jul 14 2022 21:20:35 for Contiki-NG by doxygen 1.9.4

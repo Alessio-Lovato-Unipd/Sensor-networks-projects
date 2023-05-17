@@ -49,19 +49,12 @@
 #define DHT22_H_
 /* -------------------------------------------------------------------------- */
 /**
- * \name DHT22 default pin and port
+ * \name DHT22 default pin and port 
+ * \details Defined by 'board.h' file for firefly-reva and our connection to pins
  * @{
  */
-#ifdef DHT22_CONF_PIN
-#define DHT22_PIN        DHT22_CONF_PIN
-#else
-#define DHT22_PIN        9
-#endif
-#ifdef DHT22_CONF_PORT
-#define DHT22_PORT       DHT22_CONF_PORT
-#else
-#define DHT22_PORT       GPIO_A_NUM
-#endif
+#define DHT22_PIN    I2C_SCL_PIN
+#define DHT22_PORT   I2C_SCL_PORT
 /** @} */
 /* -------------------------------------------------------------------------- */
 /**
@@ -100,6 +93,7 @@
  * @{
  */
 int16_t dht22_read_all(int16_t *temperature, int16_t *humidity);
+int configure_DHT22(int type, int value);
 /** @} */
 /* -------------------------------------------------------------------------- */
 #define DHT22_SENSOR "DHT22 sensor"
