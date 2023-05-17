@@ -44,7 +44,7 @@
 #include "dev/watchdog.h"
 #include <stdio.h>
 /*---------------------------------------------------------------------------*/
-#define DEBUG 1
+#define DEBUG 0
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
 #else
@@ -158,6 +158,8 @@ dht22_temperature(void)
   res = dht22_data[2] & 0x7F;
   res *= 256;
   res += dht22_data[3];
+  if (dht22_data[2] & 0x80) //convert to negative values
+	  res *= -1;
   busy = 0;
   return res;
 }
