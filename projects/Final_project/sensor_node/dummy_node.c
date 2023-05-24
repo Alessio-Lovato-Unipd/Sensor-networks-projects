@@ -2,15 +2,12 @@
 #include <stdio.h>
 #include <limits.h>
 #include "sys/etimer.h"
-#include <time.h>
 #include <stdlib.h>
-#include "os/dev/radio.h"
 
 /*********************************   NODE OPTION   *******************************************/
 
 #define DUMMY
 //#define ENERGEST
-//#define RADIO_SWITCH
 /*********************************   SENSOR   *******************************************/
 
 // Sensor acquisition time
@@ -277,7 +274,7 @@ PROCESS_THREAD(energest_process, ev, data)
            to_seconds(ENERGEST_GET_TOTAL_TIME()
                       - energest_type_time(ENERGEST_TYPE_TRANSMIT)
                       - energest_type_time(ENERGEST_TYPE_LISTEN)));simple_udp_register(&udp_conn, UDP_CLIENT_PORT, NULL,
-											UDP_SERVER_PORT, udp_sensor_callback);
+											UDP_SERVER_PORT, udp_rx_callback);
   }
 
   PROCESS_END();

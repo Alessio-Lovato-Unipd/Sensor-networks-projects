@@ -31,20 +31,17 @@
 #include "net/routing/routing.h"
 #include "net/netstack.h"
 #include "net/ipv6/simple-udp.h"
+#include "../network_configuration.h"
 
 #include "sys/log.h"
 #define LOG_MODULE "App"
 #define LOG_LEVEL LOG_LEVEL_INFO
 
-#define WITH_SERVER_REPLY  1
-#define UDP_CLIENT_PORT	8765
-#define UDP_SERVER_PORT	5678
 
 static struct simple_udp_connection udp_conn;
+
 // PACKETS EXCHANGED 
-struct packet {
-    int16_t temperature, humidity;
-} received_data;
+struct packet received_data;
 
 PROCESS(udp_server_process, "UDP server");
 AUTOSTART_PROCESSES(&udp_server_process);
