@@ -57,8 +57,7 @@ udp_rx_callback(struct simple_udp_connection *c,
   LOG_INFO_6ADDR(sender_addr);
   LOG_INFO_("\n");
   memcpy(&received_data, data, sizeof(struct packet));
-  // int16_t temp = received_data.temperature;
-  // int16_t hum = received_data.humidity;
+
   LOG_INFO("Data received:\n");
   LOG_INFO("Temperature %02d.%02d ºC, Humidity %02d.%02d RH\n", received_data.temperature / 10, received_data.temperature % 10,
                                                                 received_data.humidity / 10, received_data.humidity % 10);

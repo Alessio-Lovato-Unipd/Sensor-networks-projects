@@ -1,9 +1,7 @@
 CONTIKI_PROJECT = border_node
 all: $(CONTIKI_PROJECT)
 
-# Add library of sensor
-CONTIKI_TARGET_SOURCEFILES += dht22.c
-PROJECT_SOURCEFILES += ../network_configuration.c
+MAKE_MAC = MAKE_MAC_TSCH
 
 CONTIKI = ../../..
 include $(CONTIKI)/Makefile.include
