@@ -21,6 +21,9 @@
 // Time between reconnection after MAX_NUM_OF_MISSING
 #define SECONDS_BETWEEN_RECONNECTION 20
 
+//Time the node keep un connection to be a router
+#define ROUTING_TIME (CLOCK_SECOND * 5)
+
 
 // PACKETS EXCHANGED 
 struct packet {

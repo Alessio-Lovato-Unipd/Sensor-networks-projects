@@ -7,11 +7,11 @@
 /*********************************   NODE OPTION   *******************************************/
 
 #define DUMMY
-//#define ENERGEST
+
 /*********************************   SENSOR   *******************************************/
 
 // Sensor acquisition time
-#define SECONDS_BETWEEN_READS 	(6 * CLOCK_SECOND)//Seconds between each read: >= 2
+#define SECONDS_BETWEEN_READS 	(60 * CLOCK_SECOND)//Seconds between each read: >= 2
 
 #ifndef DUMMY
 	// DHT22 CONFIGURATION
@@ -32,8 +32,6 @@ struct packet data_to_send;
 struct simple_udp_connection udp_conn;
 uip_ipaddr_t dest_ipaddr;
 
-#define ROUTING_TIME (CLOCK_SECOND * 5)
-
 uint8_t missed_delivery = 0; // Number of packet not delivery to the receiver node
 bool ack = false;	// Variable to identify if node obtains the ack from receiver
 
@@ -50,9 +48,6 @@ static void udp_rx_callback(struct simple_udp_connection *c,
 PROCESS(main_process, "general process");
 PROCESS(dht22_process, "DHT22 process");
 PROCESS(send_data_process, "Data sending process");
-#ifdef ENERGEST
-PROCESS(energest_process, "Energest process");
-#endif
 
 
 // Declare an event to signal the completion of the second process
@@ -60,11 +55,8 @@ static process_event_t measure_finished;
 static process_event_t transmission_finished;
 
 // Process autostart
-#ifdef ENERGEST
-AUTOSTART_PROCESSES(&main_process, &energest_process);
-#else
 AUTOSTART_PROCESSES(&main_process);
-#endif
+
 
 /***********************************  	MAIN THREAD    *******************************************/
 PROCESS_THREAD(main_process, ev, data)
@@ -77,11 +69,7 @@ PROCESS_THREAD(main_process, ev, data)
   	simple_udp_register(&udp_conn, UDP_CLIENT_PORT, NULL,
                       UDP_SERVER_PORT, udp_rx_callback);
 
-	//Low Power settings
-
-	/* Initialize low powe control*/
-	//lpm_init();
-	
+		
 	while (1)
 	{
 		//measure process
@@ -96,10 +84,9 @@ PROCESS_THREAD(main_process, ev, data)
 		PROCESS_WAIT_EVENT_UNTIL(ev == transmission_finished);
 
 		// Wait time before next measurement
-		//lpm_enter();
 		etimer_set(&timer_sensing, SECONDS_BETWEEN_READS);
 		PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer_sensing));
-		//lpm_exit();
+
 	}
 	PROCESS_END();
 }
@@ -180,6 +167,9 @@ PROCESS_THREAD(send_data_process, ev, data)
 			LOG_INFO("Data sent to: ");
 			LOG_INFO_6ADDR(&dest_ipaddr);
 			LOG_INFO_("\n");
+			// Keep up receiver for ROUTING_TIME seconds to exchange data from other packets
+			etimer_set(&timer, ROUTING_TIME);
+			PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
 		} else {
 			if (NETSTACK_ROUTING.node_is_reachable()){
 				LOG_ERR("Node not reachable\n");
@@ -188,20 +178,15 @@ PROCESS_THREAD(send_data_process, ev, data)
 			}
 		}
 
-	// Keep up receiver for ROUTING_TIME seconds to exchange data from other packets
-	etimer_set(&timer, ROUTING_TIME);
-	PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
-
 	if (!ack)	// Packet not delivered
 		{	
 		missed_delivery++;
 		LOG_INFO("MISSING: %u\n", missed_delivery);
 		if (missed_delivery >= MAX_NUM_OF_MISSING)
 		{
-			while(!ack) {
+			while(!ack) { //Try to make a connection every RECONNECTION_SECONDS seconds
 			LOG_INFO("Retry a new connection to the network...\n");
 
-			//Try to make a connection every RECONNECTION_SECONDS seconds
 			if(NETSTACK_ROUTING.node_is_reachable() &&
 					NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr)) {
 				simple_udp_sendto(&udp_conn, &data_to_send, sizeof(data_to_send), &dest_ipaddr);
@@ -233,50 +218,3 @@ PROCESS_THREAD(send_data_process, ev, data)
 
 	PROCESS_END();
 }
-
-/******************************		ENERGEST THREAD		****************************************/
-
-#ifdef ENERGEST
-#include "sys/energest.h"
-
-static inline unsigned long
-to_seconds(uint64_t time)
-{
-  return (unsigned long)(time / ENERGEST_SECOND);
-}
-
-PROCESS_THREAD(energest_process, ev, data)
-{
-  static struct etimer timer;
-
-  PROCESS_BEGIN();
-
-  etimer_set(&timer, CLOCK_SECOND * 30);
-  while(1) {
-    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
-    etimer_reset(&timer);
-
-    /*
-     * Update all energest times. Should always be called before energest
-     * times are read.
-     */
-    energest_flush();
-
-    printf("\nEnergest:\n");
-    printf(" CPU          %4lus LPM      %4lus DEEP LPM %4lus  Total time %lus\n",
-           to_seconds(energest_type_time(ENERGEST_TYPE_CPU)),
-           to_seconds(energest_type_time(ENERGEST_TYPE_LPM)),
-           to_seconds(energest_type_time(ENERGEST_TYPE_DEEP_LPM)),
-           to_seconds(ENERGEST_GET_TOTAL_TIME()));
-    printf(" Radio LISTEN %4lus TRANSMIT %4lus OFF      %4lus\n",
-           to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN)),
-           to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT)),
-           to_seconds(ENERGEST_GET_TOTAL_TIME()
-                      - energest_type_time(ENERGEST_TYPE_TRANSMIT)
-                      - energest_type_time(ENERGEST_TYPE_LISTEN)));simple_udp_register(&udp_conn, UDP_CLIENT_PORT, NULL,
-											UDP_SERVER_PORT, udp_rx_callback);
-  }
-
-  PROCESS_END();
-}
-#endif
