@@ -1,4 +1,4 @@
-CONTIKI_PROJECT = sensor_node dummy_node example-energest
+CONTIKI_PROJECT = sensor_node
 all: $(CONTIKI_PROJECT)
 
 # Add library of sensor
