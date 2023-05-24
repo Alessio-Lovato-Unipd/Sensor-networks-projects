@@ -1,0 +1,935 @@
+using saved target 'zoul'
+rlwrap ../../../tools/serial-io/serialdump -b115200 /dev/ttyUSB0
+[INFO: App       ] Temperature 26.02 ºC, Humidity 52.09 RH
+[ERR : App       ] DODAG not reachable
+[INFO: App       ] MISSING: 2
+[INFO: App       ] Temperature 20.00 ºC, Humidity 50.08 RH
+[ERR : App       ] DODAG not reachable
+[INFO: App       ] MISSING: 3
+[INFO: App       ] Temperature 25.02 ºC, Humidity 25.06 RH
+[ERR : App       ] DODAG not reachable
+[INFO: App       ] MISSING: 4
+[INFO: App       ] Temperature 25.06 ºC, Humidity 11.09 RH
+[ERR : App       ] DODAG not reachable
+[INFO: App       ] MISSING: 5
+[INFO: App       ] Retry a new connection to the network...
+[INFO: App       ] No connection possible
+[INFO: App       ] New try in 20 seconds
+[INFO: Energest  ] --- Period summary #0 (60 seconds)
+[INFO: Energest  ] Total time  :    1966505
+[INFO: Energest  ] CPU         :      27288/   1966505 (13 permil)
+[INFO: Energest  ] LPM         :     892173/   1966505 (453 permil)
+[INFO: Energest  ] Deep LPM    :    1047044/   1966505 (532 permil)
+[INFO: Energest  ] Radio Tx    :         74/   1966505 (0 permil)
+[INFO: Energest  ] Radio Rx    :     907795/   1966505 (461 permil)
+[INFO: Energest  ] Radio total :     907869/   1966505 (461 permil)
+[INFO: App       ] Retry a new connection to the network...
+[INFO: App       ] No connection possible
+[INFO: App       ] New try in 20 seconds
+[INFO: App       ] Retry a new connection to the network...
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Connection successfull
+[INFO: App       ] Temperature 21.01 ºC, Humidity 35.01 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 34.03 ºC, Humidity 70.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #1 (59 seconds)
+[INFO: Energest  ] Total time  :    1965778
+[INFO: Energest  ] CPU         :      14984/   1965778 (7 permil)
+[INFO: Energest  ] LPM         :      77819/   1965778 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872975/   1965778 (952 permil)
+[INFO: Energest  ] Radio Tx    :       1247/   1965778 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67403/   1965778 (34 permil)
+[INFO: Energest  ] Radio total :      68650/   1965778 (34 permil)
+[INFO: App       ] Temperature 10.08 ºC, Humidity 39.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 33.00 ºC, Humidity 36.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 16.09 ºC, Humidity 93.02 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 41.07 ºC, Humidity 84.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #2 (59 seconds)
+[INFO: Energest  ] Total time  :    1965777
+[INFO: Energest  ] CPU         :      14648/   1965777 (7 permil)
+[INFO: Energest  ] LPM         :      78278/   1965777 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872851/   1965777 (952 permil)
+[INFO: Energest  ] Radio Tx    :        693/   1965777 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67530/   1965777 (34 permil)
+[INFO: Energest  ] Radio total :      68223/   1965777 (34 permil)
+[INFO: App       ] Temperature 47.02 ºC, Humidity 86.08 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 48.00 ºC, Humidity 22.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 04.09 ºC, Humidity 59.02 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 16.04 ºC, Humidity 16.09 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #3 (60 seconds)
+[INFO: Energest  ] Total time  :    1968072
+[INFO: Energest  ] CPU         :      14746/   1968072 (7 permil)
+[INFO: Energest  ] LPM         :      78502/   1968072 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1874824/   1968072 (952 permil)
+[INFO: Energest  ] Radio Tx    :        693/   1968072 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67561/   1968072 (34 permil)
+[INFO: Energest  ] Radio total :      68254/   1968072 (34 permil)
+[INFO: App       ] Temperature 05.01 ºC, Humidity 42.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 19.00 ºC, Humidity 62.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 13.05 ºC, Humidity 92.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 44.04 ºC, Humidity 31.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #4 (59 seconds)
+[INFO: Energest  ] Total time  :    1965776
+[INFO: Energest  ] CPU         :      14612/   1965776 (7 permil)
+[INFO: Energest  ] LPM         :      78382/   1965776 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872782/   1965776 (952 permil)
+[INFO: Energest  ] Radio Tx    :        745/   1965776 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67376/   1965776 (34 permil)
+[INFO: Energest  ] Radio total :      68121/   1965776 (34 permil)
+[INFO: App       ] Temperature 36.02 ºC, Humidity 48.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 36.03 ºC, Humidity 30.01 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 21.00 ºC, Humidity 23.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 37.06 ºC, Humidity 43.01 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #5 (59 seconds)
+[INFO: Energest  ] Total time  :    1965777
+[INFO: Energest  ] CPU         :      14814/   1965777 (7 permil)
+[INFO: Energest  ] LPM         :      77735/   1965777 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873228/   1965777 (952 permil)
+[INFO: Energest  ] Radio Tx    :        700/   1965777 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67482/   1965777 (34 permil)
+[INFO: Energest  ] Radio total :      68182/   1965777 (34 permil)
+[INFO: App       ] Temperature 42.09 ºC, Humidity 39.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 17.05 ºC, Humidity 49.01 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 19.00 ºC, Humidity 34.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 13.04 ºC, Humidity 42.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #6 (59 seconds)
+[INFO: Energest  ] Total time  :    1965776
+[INFO: Energest  ] CPU         :      14815/   1965776 (7 permil)
+[INFO: Energest  ] LPM         :      77841/   1965776 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873120/   1965776 (952 permil)
+[INFO: Energest  ] Radio Tx    :        632/   1965776 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67419/   1965776 (34 permil)
+[INFO: Energest  ] Radio total :      68051/   1965776 (34 permil)
+[INFO: App       ] Temperature 12.09 ºC, Humidity 03.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 22.07 ºC, Humidity 12.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 24.03 ºC, Humidity 33.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 10.04 ºC, Humidity 76.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #7 (59 seconds)
+[INFO: Energest  ] Total time  :    1965779
+[INFO: Energest  ] CPU         :      14404/   1965779 (7 permil)
+[INFO: Energest  ] LPM         :      78269/   1965779 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873106/   1965779 (952 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965779 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67497/   1965779 (34 permil)
+[INFO: Energest  ] Radio total :      68077/   1965779 (34 permil)
+[INFO: App       ] Temperature 24.09 ºC, Humidity 62.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 25.06 ºC, Humidity 93.02 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 07.02 ºC, Humidity 61.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 49.00 ºC, Humidity 50.09 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #8 (59 seconds)
+[INFO: Energest  ] Total time  :    1965779
+[INFO: Energest  ] CPU         :      14683/   1965779 (7 permil)
+[INFO: Energest  ] LPM         :      78009/   1965779 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873087/   1965779 (952 permil)
+[INFO: Energest  ] Radio Tx    :        693/   1965779 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67482/   1965779 (34 permil)
+[INFO: Energest  ] Radio total :      68175/   1965779 (34 permil)
+[INFO: App       ] Temperature 11.09 ºC, Humidity 40.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 19.05 ºC, Humidity 04.09 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 32.07 ºC, Humidity 71.09 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 49.07 ºC, Humidity 82.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #9 (59 seconds)
+[INFO: Energest  ] Total time  :    1965777
+[INFO: Energest  ] CPU         :      14365/   1965777 (7 permil)
+[INFO: Energest  ] LPM         :      78615/   1965777 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872797/   1965777 (952 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965777 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67595/   1965777 (34 permil)
+[INFO: Energest  ] Radio total :      68175/   1965777 (34 permil)
+[INFO: App       ] Temperature 09.06 ºC, Humidity 64.09 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 35.06 ºC, Humidity 18.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 09.03 ºC, Humidity 24.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 00.07 ºC, Humidity 30.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #10 (59 seconds)
+[INFO: Energest  ] Total time  :    1965776
+[INFO: Energest  ] CPU         :      14667/   1965776 (7 permil)
+[INFO: Energest  ] LPM         :      78065/   1965776 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873044/   1965776 (952 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965776 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67544/   1965776 (34 permil)
+[INFO: Energest  ] Radio total :      68124/   1965776 (34 permil)
+[INFO: App       ] Temperature 00.09 ºC, Humidity 75.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 35.02 ºC, Humidity 66.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 28.03 ºC, Humidity 73.08 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 30.01 ºC, Humidity 69.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #11 (60 seconds)
+[INFO: Energest  ] Total time  :    1968073
+[INFO: Energest  ] CPU         :      14513/   1968073 (7 permil)
+[INFO: Energest  ] LPM         :      78299/   1968073 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1875261/   1968073 (952 permil)
+[INFO: Energest  ] Radio Tx    :        632/   1968073 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67577/   1968073 (34 permil)
+[INFO: Energest  ] Radio total :      68209/   1968073 (34 permil)
+[INFO: App       ] Temperature 33.00 ºC, Humidity 33.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 19.05 ºC, Humidity 65.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 46.03 ºC, Humidity 01.01 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 42.07 ºC, Humidity 04.02 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #12 (59 seconds)
+[INFO: Energest  ] Total time  :    1965776
+[INFO: Energest  ] CPU         :      14904/   1965776 (7 permil)
+[INFO: Energest  ] LPM         :      77778/   1965776 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873094/   1965776 (952 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965776 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67507/   1965776 (34 permil)
+[INFO: Energest  ] Radio total :      68087/   1965776 (34 permil)
+[INFO: App       ] Temperature 10.06 ºC, Humidity 96.08 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 21.02 ºC, Humidity 00.01 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 01.00 ºC, Humidity 48.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 15.08 ºC, Humidity 57.01 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #13 (59 seconds)
+[INFO: Energest  ] Total time  :    1965777
+[INFO: Energest  ] CPU         :      14678/   1965777 (7 permil)
+[INFO: Energest  ] LPM         :      78328/   1965777 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872771/   1965777 (952 permil)
+[INFO: Energest  ] Radio Tx    :        632/   1965777 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67514/   1965777 (34 permil)
+[INFO: Energest  ] Radio total :      68146/   1965777 (34 permil)
+[INFO: App       ] Temperature 33.01 ºC, Humidity 81.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 34.07 ºC, Humidity 56.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 19.07 ºC, Humidity 62.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 43.08 ºC, Humidity 93.01 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #14 (59 seconds)
+[INFO: Energest  ] Total time  :    1965779
+[INFO: Energest  ] CPU         :      14441/   1965779 (7 permil)
+[INFO: Energest  ] LPM         :      78533/   1965779 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872805/   1965779 (952 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965779 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67551/   1965779 (34 permil)
+[INFO: Energest  ] Radio total :      68131/   1965779 (34 permil)
+[INFO: App       ] Temperature 01.08 ºC, Humidity 48.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 15.01 ºC, Humidity 18.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 41.03 ºC, Humidity 17.09 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 49.05 ºC, Humidity 75.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #15 (59 seconds)
+[INFO: Energest  ] Total time  :    1965779
+[INFO: Energest  ] CPU         :      14559/   1965779 (7 permil)
+[INFO: Energest  ] LPM         :      78401/   1965779 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872819/   1965779 (952 permil)
+[INFO: Energest  ] Radio Tx    :        693/   1965779 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67482/   1965779 (34 permil)
+[INFO: Energest  ] Radio total :      68175/   1965779 (34 permil)
+[INFO: App       ] Temperature 25.00 ºC, Humidity 91.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 06.02 ºC, Humidity 13.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 27.03 ºC, Humidity 54.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 02.01 ºC, Humidity 83.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #16 (59 seconds)
+[INFO: Energest  ] Total time  :    1965775
+[INFO: Energest  ] CPU         :      14360/   1965775 (7 permil)
+[INFO: Energest  ] LPM         :      78399/   1965775 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873016/   1965775 (952 permil)
+[INFO: Energest  ] Radio Tx    :        632/   1965775 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67577/   1965775 (34 permil)
+[INFO: Energest  ] Radio total :      68209/   1965775 (34 permil)
+[INFO: App       ] Temperature 14.00 ºC, Humidity 55.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 17.08 ºC, Humidity 72.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 00.03 ºC, Humidity 59.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 40.08 ºC, Humidity 89.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #17 (59 seconds)
+[INFO: Energest  ] Total time  :    1965779
+[INFO: Energest  ] CPU         :      14660/   1965779 (7 permil)
+[INFO: Energest  ] LPM         :      78068/   1965779 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873051/   1965779 (952 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965779 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67554/   1965779 (34 permil)
+[INFO: Energest  ] Radio total :      68134/   1965779 (34 permil)
+[INFO: App       ] Temperature 48.08 ºC, Humidity 23.08 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 08.05 ºC, Humidity 09.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 18.08 ºC, Humidity 72.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 21.01 ºC, Humidity 74.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #18 (60 seconds)
+[INFO: Energest  ] Total time  :    1968072
+[INFO: Energest  ] CPU         :      14720/   1968072 (7 permil)
+[INFO: Energest  ] LPM         :      78450/   1968072 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1874902/   1968072 (952 permil)
+[INFO: Energest  ] Radio Tx    :        673/   1968072 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67649/   1968072 (34 permil)
+[INFO: Energest  ] Radio total :      68322/   1968072 (34 permil)
+[INFO: App       ] Temperature 38.07 ºC, Humidity 71.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 20.09 ºC, Humidity 88.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 16.08 ºC, Humidity 10.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 47.03 ºC, Humidity 90.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #19 (59 seconds)
+[INFO: Energest  ] Total time  :    1965778
+[INFO: Energest  ] CPU         :      14502/   1965778 (7 permil)
+[INFO: Energest  ] LPM         :      78495/   1965778 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872781/   1965778 (952 permil)
+[INFO: Energest  ] Radio Tx    :        640/   1965778 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67509/   1965778 (34 permil)
+[INFO: Energest  ] Radio total :      68149/   1965778 (34 permil)
+[INFO: App       ] Temperature 17.04 ºC, Humidity 10.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 18.03 ºC, Humidity 95.02 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 37.00 ºC, Humidity 78.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 30.02 ºC, Humidity 41.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #20 (59 seconds)
+[INFO: Energest  ] Total time  :    1965777
+[INFO: Energest  ] CPU         :      14840/   1965777 (7 permil)
+[INFO: Energest  ] LPM         :      78074/   1965777 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872863/   1965777 (952 permil)
+[INFO: Energest  ] Radio Tx    :        632/   1965777 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67491/   1965777 (34 permil)
+[INFO: Energest  ] Radio total :      68123/   1965777 (34 permil)
+[INFO: App       ] Temperature 40.05 ºC, Humidity 11.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 40.00 ºC, Humidity 99.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 14.02 ºC, Humidity 58.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 36.00 ºC, Humidity 04.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #21 (59 seconds)
+[INFO: Energest  ] Total time  :    1965778
+[INFO: Energest  ] CPU         :      14926/   1965778 (7 permil)
+[INFO: Energest  ] LPM         :      77753/   1965778 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873099/   1965778 (952 permil)
+[INFO: Energest  ] Radio Tx    :        640/   1965778 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67512/   1965778 (34 permil)
+[INFO: Energest  ] Radio total :      68152/   1965778 (34 permil)
+[INFO: App       ] Temperature 42.04 ºC, Humidity 73.01 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 15.08 ºC, Humidity 38.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 21.09 ºC, Humidity 40.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 41.05 ºC, Humidity 05.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #22 (59 seconds)
+[INFO: Energest  ] Total time  :    1965777
+[INFO: Energest  ] CPU         :      14091/   1965777 (7 permil)
+[INFO: Energest  ] LPM         :      78590/   1965777 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873096/   1965777 (952 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965777 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67516/   1965777 (34 permil)
+[INFO: Energest  ] Radio total :      68096/   1965777 (34 permil)
+[INFO: App       ] Temperature 18.02 ºC, Humidity 87.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 06.01 ºC, Humidity 00.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 10.02 ºC, Humidity 26.08 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 36.05 ºC, Humidity 47.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #23 (59 seconds)
+[INFO: Energest  ] Total time  :    1965778
+[INFO: Energest  ] CPU         :      14815/   1965778 (7 permil)
+[INFO: Energest  ] LPM         :      77886/   1965778 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873077/   1965778 (952 permil)
+[INFO: Energest  ] Radio Tx    :        632/   1965778 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67494/   1965778 (34 permil)
+[INFO: Energest  ] Radio total :      68126/   1965778 (34 permil)
+[INFO: App       ] Temperature 01.08 ºC, Humidity 72.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 08.09 ºC, Humidity 10.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 31.09 ºC, Humidity 13.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 15.05 ºC, Humidity 73.02 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #24 (59 seconds)
+[INFO: Energest  ] Total time  :    1965778
+[INFO: Energest  ] CPU         :      14609/   1965778 (7 permil)
+[INFO: Energest  ] LPM         :      78379/   1965778 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872790/   1965778 (952 permil)
+[INFO: Energest  ] Radio Tx    :        640/   1965778 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67512/   1965778 (34 permil)
+[INFO: Energest  ] Radio total :      68152/   1965778 (34 permil)
+[INFO: App       ] Temperature 49.03 ºC, Humidity 97.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 09.05 ºC, Humidity 81.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 17.03 ºC, Humidity 05.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 23.00 ºC, Humidity 09.05 RH
+[INFO: Energest  ] --- Period summary #25 (59 seconds)
+[INFO: Energest  ] Total time  :    1965962
+[INFO: Energest  ] CPU         :      13924/   1965962 (7 permil)
+[INFO: Energest  ] LPM         :      77749/   1965962 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1874289/   1965962 (953 permil)
+[INFO: Energest  ] Radio Tx    :        487/   1965962 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67572/   1965962 (34 permil)
+[INFO: Energest  ] Radio total :      68059/   1965962 (34 permil)
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 24.05 ºC, Humidity 70.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 19.04 ºC, Humidity 94.08 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 37.03 ºC, Humidity 35.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #26 (60 seconds)
+[INFO: Energest  ] Total time  :    1967887
+[INFO: Energest  ] CPU         :      14323/   1967887 (7 permil)
+[INFO: Energest  ] LPM         :      78249/   1967887 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1875315/   1967887 (952 permil)
+[INFO: Energest  ] Radio Tx    :        640/   1967887 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67487/   1967887 (34 permil)
+[INFO: Energest  ] Radio total :      68127/   1967887 (34 permil)
+[INFO: App       ] Temperature 47.04 ºC, Humidity 76.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 24.01 ºC, Humidity 75.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 14.04 ºC, Humidity 14.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 14.00 ºC, Humidity 73.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #27 (59 seconds)
+[INFO: Energest  ] Total time  :    1965777
+[INFO: Energest  ] CPU         :      14596/   1965777 (7 permil)
+[INFO: Energest  ] LPM         :      78305/   1965777 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872876/   1965777 (952 permil)
+[INFO: Energest  ] Radio Tx    :        632/   1965777 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67468/   1965777 (34 permil)
+[INFO: Energest  ] Radio total :      68100/   1965777 (34 permil)
+[INFO: App       ] Temperature 17.09 ºC, Humidity 13.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 14.09 ºC, Humidity 52.09 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 21.00 ºC, Humidity 60.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 41.07 ºC, Humidity 25.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #28 (59 seconds)
+[INFO: Energest  ] Total time  :    1965777
+[INFO: Energest  ] CPU         :      14600/   1965777 (7 permil)
+[INFO: Energest  ] LPM         :      78337/   1965777 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872840/   1965777 (952 permil)
+[INFO: Energest  ] Radio Tx    :        693/   1965777 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67482/   1965777 (34 permil)
+[INFO: Energest  ] Radio total :      68175/   1965777 (34 permil)
+[INFO: App       ] Temperature 28.07 ºC, Humidity 37.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 12.06 ºC, Humidity 44.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 11.02 ºC, Humidity 17.02 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 09.05 ºC, Humidity 15.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #29 (59 seconds)
+[INFO: Energest  ] Total time  :    1965780
+[INFO: Energest  ] CPU         :      14808/   1965780 (7 permil)
+[INFO: Energest  ] LPM         :      78435/   1965780 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872537/   1965780 (952 permil)
+[INFO: Energest  ] Radio Tx    :        715/   1965780 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67535/   1965780 (34 permil)
+[INFO: Energest  ] Radio total :      68250/   1965780 (34 permil)
+[INFO: App       ] Temperature 05.03 ºC, Humidity 18.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 21.07 ºC, Humidity 65.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 01.07 ºC, Humidity 17.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 07.07 ºC, Humidity 77.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #30 (59 seconds)
+[INFO: Energest  ] Total time  :    1965776
+[INFO: Energest  ] CPU         :      14597/   1965776 (7 permil)
+[INFO: Energest  ] LPM         :      77601/   1965776 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873578/   1965776 (953 permil)
+[INFO: Energest  ] Radio Tx    :        632/   1965776 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67538/   1965776 (34 permil)
+[INFO: Energest  ] Radio total :      68170/   1965776 (34 permil)
+[INFO: App       ] Temperature 39.09 ºC, Humidity 65.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 22.08 ºC, Humidity 00.02 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 16.01 ºC, Humidity 45.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 37.00 ºC, Humidity 31.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #31 (59 seconds)
+[INFO: Energest  ] Total time  :    1965779
+[INFO: Energest  ] CPU         :      14313/   1965779 (7 permil)
+[INFO: Energest  ] LPM         :      78165/   1965779 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873301/   1965779 (952 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965779 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67540/   1965779 (34 permil)
+[INFO: Energest  ] Radio total :      68120/   1965779 (34 permil)
+[INFO: App       ] Temperature 19.04 ºC, Humidity 38.01 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 43.00 ºC, Humidity 48.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 10.04 ºC, Humidity 38.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 35.09 ºC, Humidity 20.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #32 (59 seconds)
+[INFO: Energest  ] Total time  :    1965776
+[INFO: Energest  ] CPU         :      14557/   1965776 (7 permil)
+[INFO: Energest  ] LPM         :      78409/   1965776 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872810/   1965776 (952 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965776 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67518/   1965776 (34 permil)
+[INFO: Energest  ] Radio total :      68098/   1965776 (34 permil)
+[INFO: App       ] Temperature 45.04 ºC, Humidity 07.09 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 20.02 ºC, Humidity 36.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 45.03 ºC, Humidity 73.02 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 33.06 ºC, Humidity 43.02 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #33 (59 seconds)
+[INFO: Energest  ] Total time  :    1965779
+[INFO: Energest  ] CPU         :      14599/   1965779 (7 permil)
+[INFO: Energest  ] LPM         :      78397/   1965779 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872783/   1965779 (952 permil)
+[INFO: Energest  ] Radio Tx    :        632/   1965779 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67517/   1965779 (34 permil)
+[INFO: Energest  ] Radio total :      68149/   1965779 (34 permil)
+[INFO: App       ] Temperature 06.03 ºC, Humidity 01.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 10.07 ºC, Humidity 58.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 41.00 ºC, Humidity 46.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 11.06 ºC, Humidity 54.06 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #34 (60 seconds)
+[INFO: Energest  ] Total time  :    1968071
+[INFO: Energest  ] CPU         :      14556/   1968071 (7 permil)
+[INFO: Energest  ] LPM         :      78267/   1968071 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1875248/   1968071 (952 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1968071 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67689/   1968071 (34 permil)
+[INFO: Energest  ] Radio total :      68269/   1968071 (34 permil)
+[INFO: App       ] Temperature 21.09 ºC, Humidity 52.08 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 07.01 ºC, Humidity 10.07 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 25.06 ºC, Humidity 52.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 35.03 ºC, Humidity 52.08 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #35 (59 seconds)
+[INFO: Energest  ] Total time  :    1965778
+[INFO: Energest  ] CPU         :      14591/   1965778 (7 permil)
+[INFO: Energest  ] LPM         :      78168/   1965778 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873019/   1965778 (952 permil)
+[INFO: Energest  ] Radio Tx    :        632/   1965778 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67507/   1965778 (34 permil)
+[INFO: Energest  ] Radio total :      68139/   1965778 (34 permil)
+[INFO: App       ] Temperature 15.04 ºC, Humidity 43.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 47.07 ºC, Humidity 04.08 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 02.00 ºC, Humidity 20.04 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 41.04 ºC, Humidity 81.00 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #36 (59 seconds)
+[INFO: Energest  ] Total time  :    1965777
+[INFO: Energest  ] CPU         :      14492/   1965777 (7 permil)
+[INFO: Energest  ] LPM         :      78188/   1965777 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1873097/   1965777 (952 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965777 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67521/   1965777 (34 permil)
+[INFO: Energest  ] Radio total :      68101/   1965777 (34 permil)
+[INFO: App       ] Temperature 21.09 ºC, Humidity 92.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 29.08 ºC, Humidity 13.01 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 20.01 ºC, Humidity 70.09 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 25.01 ºC, Humidity 02.02 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #37 (59 seconds)
+[INFO: Energest  ] Total time  :    1965778
+[INFO: Energest  ] CPU         :      15042/   1965778 (7 permil)
+[INFO: Energest  ] LPM         :      77946/   1965778 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872790/   1965778 (952 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965778 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67539/   1965778 (34 permil)
+[INFO: Energest  ] Radio total :      68119/   1965778 (34 permil)
+[INFO: App       ] Temperature 31.07 ºC, Humidity 65.02 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 42.04 ºC, Humidity 69.05 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 47.01 ºC, Humidity 15.03 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Temperature 12.05 ºC, Humidity 97.08 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #38 (59 seconds)
+[INFO: Energest  ] Total time  :    1965779
+[INFO: Energest  ] CPU         :      14364/   1965779 (7 permil)
+[INFO: Energest  ] LPM         :      78575/   1965779 (39 permil)
+[INFO: Energest  ] Deep LPM    :    1872840/   1965779 (952 permil)
+[INFO: Energest  ] Radio Tx    :        692/   1965779 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67466/   1965779 (34 permil)
+[INFO: Energest  ] Radio total :      68158/   1965779 (34 permil)
+[INFO: App       ] Temperature 11.06 ºC, Humidity 14.02 RH
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514

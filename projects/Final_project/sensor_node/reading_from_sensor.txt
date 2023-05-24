@@ -1,0 +1,302 @@
+using saved target 'zoul'
+rlwrap ../../../tools/serial-io/serialdump -b115200 /dev/ttyUSB0
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[ERR : App       ] DODAG not reachable
+[INFO: App       ] MISSING: 3
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[ERR : App       ] DODAG not reachable
+[INFO: App       ] MISSING: 4
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[ERR : App       ] DODAG not reachable
+[INFO: App       ] MISSING: 5
+[INFO: App       ] Retry a new connection to the network...
+[INFO: App       ] No connection possible
+[INFO: App       ] New try in 20 seconds
+[INFO: Energest  ] --- Period summary #0 (59 seconds)
+[INFO: Energest  ] Total time  :    1965927
+[INFO: Energest  ] CPU         :      90240/   1965927 (45 permil)
+[INFO: Energest  ] LPM         :    1875687/   1965927 (954 permil)
+[INFO: Energest  ] Deep LPM    :          0/   1965927 (0 permil)
+[INFO: Energest  ] Radio Tx    :          0/   1965927 (0 permil)
+[INFO: Energest  ] Radio Rx    :    1965916/   1965927 (999 permil)
+[INFO: Energest  ] Radio total :    1965916/   1965927 (999 permil)
+[INFO: App       ] Retry a new connection to the network...
+[INFO: App       ] No connection possible
+[INFO: App       ] New try in 20 seconds
+[INFO: App       ] Retry a new connection to the network...
+[INFO: App       ] No connection possible
+[INFO: App       ] New try in 20 seconds
+[INFO: App       ] Retry a new connection to the network...
+[INFO: App       ] No connection possible
+[INFO: App       ] New try in 20 seconds
+[INFO: Energest  ] --- Period summary #1 (60 seconds)
+[INFO: Energest  ] Total time  :    1966083
+[INFO: Energest  ] CPU         :      47458/   1966083 (24 permil)
+[INFO: Energest  ] LPM         :    1918625/   1966083 (975 permil)
+[INFO: Energest  ] Deep LPM    :          0/   1966083 (0 permil)
+[INFO: Energest  ] Radio Tx    :          0/   1966083 (0 permil)
+[INFO: Energest  ] Radio Rx    :    1966070/   1966083 (999 permil)
+[INFO: Energest  ] Radio total :    1966070/   1966083 (999 permil)
+[INFO: App       ] Retry a new connection to the network...
+[INFO: App       ] No connection possible
+[INFO: App       ] New try in 20 seconds
+[INFO: App       ] Retry a new connection to the network...
+[INFO: App       ] No connection possible
+[INFO: App       ] New try in 20 seconds
+[INFO: App       ] Retry a new connection to the network...
+[INFO: App       ] No connection possible
+[INFO: App       ] New try in 20 seconds
+[INFO: Energest  ] --- Period summary #2 (60 seconds)
+[INFO: Energest  ] Total time  :    1967324
+[INFO: Energest  ] CPU         :      35309/   1967324 (17 permil)
+[INFO: Energest  ] LPM         :    1263478/   1967324 (642 permil)
+[INFO: Energest  ] Deep LPM    :     668537/   1967324 (339 permil)
+[INFO: Energest  ] Radio Tx    :         37/   1967324 (0 permil)
+[INFO: Energest  ] Radio Rx    :    1291862/   1967324 (656 permil)
+[INFO: Energest  ] Radio total :    1291899/   1967324 (656 permil)
+[INFO: App       ] Retry a new connection to the network...
+[INFO: App       ] No connection possible
+[INFO: App       ] New try in 20 seconds
+[INFO: App       ] Retry a new connection to the network...
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Connection successfull
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #3 (59 seconds)
+[INFO: Energest  ] Total time  :    1965779
+[INFO: Energest  ] CPU         :      33877/   1965779 (17 permil)
+[INFO: Energest  ] LPM         :      75970/   1965779 (38 permil)
+[INFO: Energest  ] Deep LPM    :    1855932/   1965779 (944 permil)
+[INFO: Energest  ] Radio Tx    :       1352/   1965779 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67274/   1965779 (34 permil)
+[INFO: Energest  ] Radio total :      68626/   1965779 (34 permil)
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #4 (59 seconds)
+[INFO: Energest  ] Total time  :    1965776
+[INFO: Energest  ] CPU         :      50366/   1965776 (25 permil)
+[INFO: Energest  ] LPM         :      75954/   1965776 (38 permil)
+[INFO: Energest  ] Deep LPM    :    1839456/   1965776 (935 permil)
+[INFO: Energest  ] Radio Tx    :        730/   1965776 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67326/   1965776 (34 permil)
+[INFO: Energest  ] Radio total :      68056/   1965776 (34 permil)
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #5 (59 seconds)
+[INFO: Energest  ] Total time  :    1965779
+[INFO: Energest  ] CPU         :      50894/   1965779 (25 permil)
+[INFO: Energest  ] LPM         :      75376/   1965779 (38 permil)
+[INFO: Energest  ] Deep LPM    :    1839509/   1965779 (935 permil)
+[INFO: Energest  ] Radio Tx    :        693/   1965779 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67505/   1965779 (34 permil)
+[INFO: Energest  ] Radio total :      68198/   1965779 (34 permil)
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #6 (59 seconds)
+[INFO: Energest  ] Total time  :    1965777
+[INFO: Energest  ] CPU         :      41059/   1965777 (20 permil)
+[INFO: Energest  ] LPM         :      75495/   1965777 (38 permil)
+[INFO: Energest  ] Deep LPM    :    1849223/   1965777 (940 permil)
+[INFO: Energest  ] Radio Tx    :        720/   1965777 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67419/   1965777 (34 permil)
+[INFO: Energest  ] Radio total :      68139/   1965777 (34 permil)
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #7 (60 seconds)
+[INFO: Energest  ] Total time  :    1968071
+[INFO: Energest  ] CPU         :      50305/   1968071 (25 permil)
+[INFO: Energest  ] LPM         :      75861/   1968071 (38 permil)
+[INFO: Energest  ] Deep LPM    :    1841905/   1968071 (935 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1968071 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67626/   1968071 (34 permil)
+[INFO: Energest  ] Radio total :      68206/   1968071 (34 permil)
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #8 (59 seconds)
+[INFO: Energest  ] Total time  :    1965777
+[INFO: Energest  ] CPU         :      50589/   1965777 (25 permil)
+[INFO: Energest  ] LPM         :      75660/   1965777 (38 permil)
+[INFO: Energest  ] Deep LPM    :    1839528/   1965777 (935 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965777 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67521/   1965777 (34 permil)
+[INFO: Energest  ] Radio total :      68101/   1965777 (34 permil)
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #9 (59 seconds)
+[INFO: Energest  ] Total time  :    1965776
+[INFO: Energest  ] CPU         :      50449/   1965776 (25 permil)
+[INFO: Energest  ] LPM         :      75448/   1965776 (38 permil)
+[INFO: Energest  ] Deep LPM    :    1839879/   1965776 (935 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965776 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67557/   1965776 (34 permil)
+[INFO: Energest  ] Radio total :      68137/   1965776 (34 permil)
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #10 (59 seconds)
+[INFO: Energest  ] Total time  :    1965779
+[INFO: Energest  ] CPU         :      50573/   1965779 (25 permil)
+[INFO: Energest  ] LPM         :      75373/   1965779 (38 permil)
+[INFO: Energest  ] Deep LPM    :    1839833/   1965779 (935 permil)
+[INFO: Energest  ] Radio Tx    :        933/   1965779 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67413/   1965779 (34 permil)
+[INFO: Energest  ] Radio total :      68346/   1965779 (34 permil)
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #11 (59 seconds)
+[INFO: Energest  ] Total time  :    1965776
+[INFO: Energest  ] CPU         :      50508/   1965776 (25 permil)
+[INFO: Energest  ] LPM         :      75609/   1965776 (38 permil)
+[INFO: Energest  ] Deep LPM    :    1839659/   1965776 (935 permil)
+[INFO: Energest  ] Radio Tx    :        580/   1965776 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67623/   1965776 (34 permil)
+[INFO: Energest  ] Radio total :      68203/   1965776 (34 permil)
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: Energest  ] --- Period summary #12 (59 seconds)
+[INFO: Energest  ] Total time  :    1965778
+[INFO: Energest  ] CPU         :      50111/   1965778 (25 permil)
+[INFO: Energest  ] LPM         :      75810/   1965778 (38 permil)
+[INFO: Energest  ] Deep LPM    :    1839857/   1965778 (935 permil)
+[INFO: Energest  ] Radio Tx    :        632/   1965778 (0 permil)
+[INFO: Energest  ] Radio Rx    :      67495/   1965778 (34 permil)
+[INFO: Energest  ] Radio total :      68127/   1965778 (34 permil)
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
+[INFO: App       ] Failed to read data from DHT22 sensor.
+[INFO: App       ] Sending request to fd00::212:4b00:1940:1514
+[INFO: App       ] Data sent to: fd00::212:4b00:1940:1514
+[INFO: App       ] Received response from fd00::212:4b00:1940:1514
