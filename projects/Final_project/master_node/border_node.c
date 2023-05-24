@@ -28,7 +28,9 @@
  */
 
 #include "contiki.h"
-#include "../network_configuration.h"
+#include "net/routing/routing.h"
+#include "net/netstack.h"
+#include "net/ipv6/simple-udp.h"
 
 #include "sys/log.h"
 #define LOG_MODULE "App"
@@ -39,7 +41,10 @@
 #define UDP_SERVER_PORT	5678
 
 static struct simple_udp_connection udp_conn;
-struct packet received_data;
+// PACKETS EXCHANGED 
+struct packet {
+    int16_t temperature, humidity;
+} received_data;
 
 PROCESS(udp_server_process, "UDP server");
 AUTOSTART_PROCESSES(&udp_server_process);
@@ -57,7 +62,6 @@ udp_rx_callback(struct simple_udp_connection *c,
   LOG_INFO_6ADDR(sender_addr);
   LOG_INFO_("\n");
   memcpy(&received_data, data, sizeof(struct packet));
-
   LOG_INFO("Data received:\n");
   LOG_INFO("Temperature %02d.%02d ºC, Humidity %02d.%02d RH\n", received_data.temperature / 10, received_data.temperature % 10,
                                                                 received_data.humidity / 10, received_data.humidity % 10);

@@ -40,7 +40,7 @@ uip_ipaddr_t dest_ipaddr;
 uint8_t missed_delivery = 0; // Number of packet not delivery to the receiver node
 bool ack = false;	// Variable to identify if node obtains the ack from receiver
 
-void udp_sensor_callback(struct simple_udp_connection *c,
+static void udp_rx_callback(struct simple_udp_connection *c,
          const uip_ipaddr_t *sender_addr,
          uint16_t sender_port,
          const uip_ipaddr_t *receiver_addr,
@@ -76,10 +76,11 @@ PROCESS_THREAD(main_process, ev, data)
 	static struct etimer timer_sensing;
 	PROCESS_BEGIN();
 
+	/* Initialize UDP connection */
+  	simple_udp_register(&udp_conn, UDP_CLIENT_PORT, NULL,
+                      UDP_SERVER_PORT, udp_rx_callback);
+
 	//Low Power settings
-	#ifdef RADIO_SWITCH
-	radio_power_mode_e.set_value(RADIO_POWER_MODE_OFF);
-	#endif
 
 	/* Initialize low powe control*/
 	//lpm_init();
@@ -144,35 +145,30 @@ PROCESS_THREAD(dht22_process, ev, data)
 }
 
 /*******************************	NETWORK THREAD	*********************************************/
-void udp_sensor_callback(struct simple_udp_connection *c,
-				 const uip_ipaddr_t *sender_addr,
-				 uint16_t sender_port,
-				 const uip_ipaddr_t *receiver_addr,
-				 uint16_t receiver_port,
-				 const uint8_t *data,
-				 uint16_t datalen)
+static void
+udp_rx_callback(struct simple_udp_connection *c,
+         const uip_ipaddr_t *sender_addr,
+         uint16_t sender_port,
+         const uip_ipaddr_t *receiver_addr,
+         uint16_t receiver_port,
+         const uint8_t *data,
+         uint16_t datalen)
 {
-	ack = true;
-	LOG_INFO("Received response from ");
-	LOG_INFO_6ADDR(sender_addr);
+
+  ack = true;
+  LOG_INFO("Received response from ");
+  LOG_INFO_6ADDR(sender_addr);
 #if LLSEC802154_CONF_ENABLED
-	LOG_INFO_(" LLSEC LV:%d", uipbuf_get_attr(UIPBUF_ATTR_LLSEC_LEVEL));
+  LOG_INFO_(" LLSEC LV:%d", uipbuf_get_attr(UIPBUF_ATTR_LLSEC_LEVEL));
 #endif
-	LOG_INFO_("\n");
+  LOG_INFO_("\n");
 }
 
 PROCESS_THREAD(send_data_process, ev, data)
 {
-	static struct etimer routing_timer;
+	static struct etimer timer;
 
 	PROCESS_BEGIN();
-
-	#ifdef RADIO_SWITCH
-	radio_power_mode_e.set_value(RADIO_POWER_MODE_ON);	//Turn on radio
-	#endif
-	
-
-	/* Initialize UDP connection */
 
 	ack = false;	// set new ack to be received
 
@@ -188,60 +184,51 @@ PROCESS_THREAD(send_data_process, ev, data)
 			LOG_INFO_6ADDR(&dest_ipaddr);
 			LOG_INFO_("\n");
 		} else {
-			LOG_INFO("Not reachable yet\n");
+			if (NETSTACK_ROUTING.node_is_reachable()){
+				LOG_ERR("Node not reachable\n");
+			} else {
+				LOG_ERR("DODAG not reachable\n");
+			}
 		}
 
 	// Keep up receiver for ROUTING_TIME seconds to exchange data from other packets
-	etimer_set(&routing_timer, ROUTING_TIME);
-	PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&routing_timer));
-
-	#ifdef RADIO_SWITCH
-	radio_power_mode_e.set_value(RADIO_POWER_MODE_OFF);
-	#endif
+	etimer_set(&timer, ROUTING_TIME);
+	PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
 
 	if (!ack)	// Packet not delivered
-	{	
+		{	
 		missed_delivery++;
 		LOG_INFO("MISSING: %u\n", missed_delivery);
 		if (missed_delivery >= MAX_NUM_OF_MISSING)
 		{
 			while(!ack) {
-				LOG_INFO("Retry a new connection to the network...\n");
+			LOG_INFO("Retry a new connection to the network...\n");
 
-				//Try to make a connection every RECONNECTION_SECONDS seconds
-				#ifdef RADIO_SWITCH
-				radio_power_mode_e.set_value(RADIO_POWER_MODE_ON);
-				#endif
-				if (NETSTACK_ROUTING.node_is_reachable()) {
-					simple_udp_sendto(&udp_conn, &data_to_send, sizeof(data_to_send), &dest_ipaddr);
-				} else{
-					LOG_INFO("Node exited the network: creating new UDP connection\n");
-					simple_udp_register(&udp_conn, UDP_CLIENT_PORT, NULL,
-											UDP_SERVER_PORT, udp_sensor_callback);
-				}
-					
+			//Try to make a connection every RECONNECTION_SECONDS seconds
+			if(NETSTACK_ROUTING.node_is_reachable() &&
+					NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr)) {
+				simple_udp_sendto(&udp_conn, &data_to_send, sizeof(data_to_send), &dest_ipaddr);
+				etimer_set(&timer, RECONNECTION_SECONDS * CLOCK_SECOND);
+				PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+			} else {
+				LOG_INFO("No connection possible\n");
+			}
 
-				etimer_set(&routing_timer, RECONNECTION_SECONDS * CLOCK_SECOND);
-				PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&routing_timer));
+			if (!ack) {	//ACK not received yet
+				LOG_INFO("New try in %u seconds\n", SECONDS_BETWEEN_RECONNECTION);
 
-				#ifdef RADIO_SWITCH
-				radio_power_mode_e.set_value(RADIO_POWER_MODE_OFF);
-				#endif
-
-				if (!ack) {	//ACK not received yet
-					LOG_INFO("New try in %u seconds\n", SECONDS_BETWEEN_RECONNECTION);
-
-					// Wait some seconds before trying again
-					etimer_set(&routing_timer, SECONDS_BETWEEN_RECONNECTION * CLOCK_SECOND);	//Routing timer is used only to not create a new variable.
-					PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&routing_timer));	// Wait time before sending packet again
-				} else {
-					LOG_INFO("Connection successfull\n");
-				}
+				// Wait some seconds before trying again
+				etimer_set(&timer, SECONDS_BETWEEN_RECONNECTION * CLOCK_SECOND);	//Routing timer is used only to not create a new variable.
+				PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));	// Wait time before sending packet again
+			} else {
+				LOG_INFO("Connection successfull\n");
+				missed_delivery = 0;
+			}
 			}
 		}
-	} else {
+		} else {
 		missed_delivery = 0;
-	}
+		}
 
 	//signal process ended
 	process_post(&main_process, transmission_finished, NULL);
@@ -263,14 +250,14 @@ to_seconds(uint64_t time)
 
 PROCESS_THREAD(energest_process, ev, data)
 {
-  static struct etimer periodic_timer;
+  static struct etimer timer;
 
   PROCESS_BEGIN();
 
-  etimer_set(&periodic_timer, CLOCK_SECOND * 30);
+  etimer_set(&timer, CLOCK_SECOND * 30);
   while(1) {
-    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
-    etimer_reset(&periodic_timer);
+    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+    etimer_reset(&timer);
 
     /*
      * Update all energest times. Should always be called before energest
