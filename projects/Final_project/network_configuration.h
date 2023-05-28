@@ -13,13 +13,13 @@
 #define UDP_SERVER_PORT	5678
 
 // Time of connection to network after MAX_NUM_OF_MISSING
-#define RECONNECTION_SECONDS 10
+#define RECONNECTION_SECONDS 3
 
 // Max number of packets not delivered
 #define MAX_NUM_OF_MISSING 5
 
 // Time between reconnection after MAX_NUM_OF_MISSING
-#define SECONDS_BETWEEN_RECONNECTION 20
+#define SECONDS_BETWEEN_RECONNECTION 10
 
 //Time the node keep un connection to be a router
 #define ROUTING_TIME (CLOCK_SECOND * 5)

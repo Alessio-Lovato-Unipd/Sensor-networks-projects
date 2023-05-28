@@ -6,18 +6,18 @@
 
 /*********************************   NODE OPTION   *******************************************/
 
-#define DUMMY
+//#define DUMMY
 
 /*********************************   SENSOR   *******************************************/
 
 // Sensor acquisition time
-#define SECONDS_BETWEEN_READS 	(60 * CLOCK_SECOND)//Seconds between each read: >= 2
+#define SECONDS_BETWEEN_READS 	(30 * CLOCK_SECOND)//Seconds between each read: >= 2
 
 #ifndef DUMMY
 	// DHT22 CONFIGURATION
 	#define DHT22_CONF_PIN		I2C_SCL_PIN
 	#define DHT22_CONF_PORT 	I2C_SCL_PORT
-	#include "dev/dht22.h"
+	#include "dht22.h"
 #endif
 
 /**********************************   NETWORK   ****************************************/
@@ -32,17 +32,18 @@ struct packet data_to_send;
 struct simple_udp_connection udp_conn;
 uip_ipaddr_t dest_ipaddr;
 
-uint8_t missed_delivery = 0; // Number of packet not delivery to the receiver node
-bool ack = false;	// Variable to identify if node obtains the ack from receiver
+#if WITH_SERVER_REPLY
+	uint8_t missed_delivery = 0; // Number of packet not delivery to the receiver node
+	bool ack = false;	// Variable to identify if node obtains the ack from receiver
 
-static void udp_rx_callback(struct simple_udp_connection *c,
-         const uip_ipaddr_t *sender_addr,
-         uint16_t sender_port,
-         const uip_ipaddr_t *receiver_addr,
-         uint16_t receiver_port,
-         const uint8_t *data,
-         uint16_t datalen);
-
+	static void udp_rx_callback(struct simple_udp_connection *c,
+			const uip_ipaddr_t *sender_addr,
+			uint16_t sender_port,
+			const uip_ipaddr_t *receiver_addr,
+			uint16_t receiver_port,
+			const uint8_t *data,
+			uint16_t datalen);
+#endif
 /*******************************   PROCESSES   ********************************************/
 
 PROCESS(main_process, "general process");
@@ -66,8 +67,14 @@ PROCESS_THREAD(main_process, ev, data)
 	PROCESS_BEGIN();
 
 	/* Initialize UDP connection */
-  	simple_udp_register(&udp_conn, UDP_CLIENT_PORT, NULL,
-                      UDP_SERVER_PORT, udp_rx_callback);
+	#if WITH_SERVER_REPLY
+		simple_udp_register(&udp_conn, UDP_CLIENT_PORT, NULL,
+						UDP_SERVER_PORT, udp_rx_callback);
+	#else
+		simple_udp_register(&udp_conn, UDP_CLIENT_PORT, NULL,
+						UDP_SERVER_PORT, NULL);
+	#endif
+	
 
 		
 	while (1)
@@ -129,32 +136,34 @@ PROCESS_THREAD(dht22_process, ev, data)
 }
 
 /*******************************	NETWORK THREAD	*********************************************/
-static void
-udp_rx_callback(struct simple_udp_connection *c,
-         const uip_ipaddr_t *sender_addr,
-         uint16_t sender_port,
-         const uip_ipaddr_t *receiver_addr,
-         uint16_t receiver_port,
-         const uint8_t *data,
-         uint16_t datalen)
-{
-
-  ack = true;
-  LOG_INFO("Received response from ");
-  LOG_INFO_6ADDR(sender_addr);
-#if LLSEC802154_CONF_ENABLED
-  LOG_INFO_(" LLSEC LV:%d", uipbuf_get_attr(UIPBUF_ATTR_LLSEC_LEVEL));
+#if WITH_SERVER_REPLY
+	static void
+	udp_rx_callback(struct simple_udp_connection *c,
+			const uip_ipaddr_t *sender_addr,
+			uint16_t sender_port,
+			const uip_ipaddr_t *receiver_addr,
+			uint16_t receiver_port,
+			const uint8_t *data,
+			uint16_t datalen)
+	{
+	ack = true;
+	LOG_INFO("Received response from ");
+	LOG_INFO_6ADDR(sender_addr);
+	#if LLSEC802154_CONF_ENABLED
+	LOG_INFO_(" LLSEC LV:%d", uipbuf_get_attr(UIPBUF_ATTR_LLSEC_LEVEL));
+	#endif
+	LOG_INFO_("\n");
+	}
 #endif
-  LOG_INFO_("\n");
-}
 
 PROCESS_THREAD(send_data_process, ev, data)
 {
-	static struct etimer timer;
+	#if WITH_SERVER_REPLY
+		ack = false;	// set new ack to be received
+		static struct etimer timer;
+	#endif
 
 	PROCESS_BEGIN();
-
-	ack = false;	// set new ack to be received
 
 	if(NETSTACK_ROUTING.node_is_reachable() &&
 	NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr)) {
@@ -167,9 +176,11 @@ PROCESS_THREAD(send_data_process, ev, data)
 			LOG_INFO("Data sent to: ");
 			LOG_INFO_6ADDR(&dest_ipaddr);
 			LOG_INFO_("\n");
-			// Keep up receiver for ROUTING_TIME seconds to exchange data from other packets
-			etimer_set(&timer, ROUTING_TIME);
-			PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+			#if WITH_SERVER_REPLY
+				// Keep up receiver for ROUTING_TIME seconds to exchange data from other packets
+				etimer_set(&timer, ROUTING_TIME);
+				PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+			#endif
 		} else {
 			if (NETSTACK_ROUTING.node_is_reachable()){
 				LOG_ERR("Node not reachable\n");
@@ -177,40 +188,41 @@ PROCESS_THREAD(send_data_process, ev, data)
 				LOG_ERR("DODAG not reachable\n");
 			}
 		}
+	#if WITH_SERVER_REPLY
+		if (!ack)	// Packet not delivered
+			{	
+			missed_delivery++;
+			LOG_INFO("MISSING: %u\n", missed_delivery);
+			if (missed_delivery >= MAX_NUM_OF_MISSING)
+			{
+				while(!ack) { //Try to make a connection every RECONNECTION_SECONDS seconds
+				LOG_INFO("Retry a new connection to the network...\n");
 
-	if (!ack)	// Packet not delivered
-		{	
-		missed_delivery++;
-		LOG_INFO("MISSING: %u\n", missed_delivery);
-		if (missed_delivery >= MAX_NUM_OF_MISSING)
-		{
-			while(!ack) { //Try to make a connection every RECONNECTION_SECONDS seconds
-			LOG_INFO("Retry a new connection to the network...\n");
+				if(NETSTACK_ROUTING.node_is_reachable() &&
+						NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr)) {
+					simple_udp_sendto(&udp_conn, &data_to_send, sizeof(data_to_send), &dest_ipaddr);
+					etimer_set(&timer, RECONNECTION_SECONDS * CLOCK_SECOND);
+					PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+				} else {
+					LOG_INFO("No connection possible\n");
+				}
 
-			if(NETSTACK_ROUTING.node_is_reachable() &&
-					NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr)) {
-				simple_udp_sendto(&udp_conn, &data_to_send, sizeof(data_to_send), &dest_ipaddr);
-				etimer_set(&timer, RECONNECTION_SECONDS * CLOCK_SECOND);
-				PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+				if (!ack) {	//ACK not received yet
+					LOG_INFO("New try in %u seconds\n", SECONDS_BETWEEN_RECONNECTION);
+
+					// Wait some seconds before trying again
+					etimer_set(&timer, SECONDS_BETWEEN_RECONNECTION * CLOCK_SECOND);	//Routing timer is used only to not create a new variable.
+					PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));	// Wait time before sending packet again
+				} else {
+					LOG_INFO("Connection successfull\n");
+					missed_delivery = 0;
+				}
+				}
+			}
 			} else {
-				LOG_INFO("No connection possible\n");
+			missed_delivery = 0;
 			}
-
-			if (!ack) {	//ACK not received yet
-				LOG_INFO("New try in %u seconds\n", SECONDS_BETWEEN_RECONNECTION);
-
-				// Wait some seconds before trying again
-				etimer_set(&timer, SECONDS_BETWEEN_RECONNECTION * CLOCK_SECOND);	//Routing timer is used only to not create a new variable.
-				PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));	// Wait time before sending packet again
-			} else {
-				LOG_INFO("Connection successfull\n");
-				missed_delivery = 0;
-			}
-			}
-		}
-		} else {
-		missed_delivery = 0;
-		}
+		#endif
 
 	//signal process ended
 	process_post(&main_process, transmission_finished, NULL);
